@@ -51,5 +51,5 @@ export RDP_AAD_WM_CLASS="$WM_CLASS"
 [[ -n "$DESKTOP" ]] && export RDP_AAD_DESKTOP="$DESKTOP"
 
 exec "$VENV/bin/python" "$SCRIPT_DIR/aad_login_bot.py" \
-    /v:"$HOST" /sec:aad /cert:tofu /multimon /sound:sys:pulse \
+    /v:"$HOST" /sec:aad /cert:tofu /multimon /sound:sys:pulse /fonts /network:auto \
     /wm-class:"$WM_CLASS" "${PASSTHROUGH[@]}"
